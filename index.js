@@ -20,7 +20,11 @@ mongooose.connect(mongoURI, {
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors(
+    {
+        origin: 'http://127.0.0.1:3000'
+    }
+));
 
 // the form schema
 const formSchema = new mongooose.Schema({
