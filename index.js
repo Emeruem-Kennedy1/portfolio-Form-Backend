@@ -1,6 +1,8 @@
 const express = require('express');
 const mongooose = require('mongoose');
 const dotenv = require('dotenv').config();
+const cors = require('cors');
+
 
 const mongoURI = process.env.MONGO_URI;
 
@@ -18,6 +20,7 @@ mongooose.connect(mongoURI, {
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 // the form schema
 const formSchema = new mongooose.Schema({
