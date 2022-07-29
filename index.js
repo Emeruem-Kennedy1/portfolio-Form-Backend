@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 // to ensure that I can submit the form from the frontend using this URL
 app.use(cors(
     {
-        origin: 'http://localhost:3000'
+        origin: '*'
     }
 ));
 
