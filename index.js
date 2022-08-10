@@ -43,7 +43,7 @@ const formSchema = new mongooose.Schema({
     },
     date: {
         type: Date,
-        default: Date.now.toDateString()
+        default: Date.now
     }
 });
 
